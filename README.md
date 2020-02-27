@@ -20,6 +20,6 @@ https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_
 - A problem instance will always be given to you as a text file
 - Each line defines a city and each line has three numbers separated by a white space
 
- -The first number is a city identifier
- -The second number is the city's x-coordinate
- -The third number is the city's y-corrdinate
+ - The first number is a city identifier
+ - The second number is the city's x-coordinate
+ - The third number is the city's y-corrdinate
