@@ -23,3 +23,12 @@ https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_
  - The first number is a city identifier
  - The second number is the city's x-coordinate
  - The third number is the city's y-corrdinate
+
+## Output specifications
+
+- You must output your solution int oanother text file with n+1 lines, where n is the number of cities.
+- The first line is the length of the tour your program computes.
+- The next n lines should contain the citiy identifier in the order they are visited by your tour.
+
+- Each city must be listed exactly once in this list.
+- This is the certificate for your solution and your solutions will be checked. I they are not valid you will not receive credit for them.
