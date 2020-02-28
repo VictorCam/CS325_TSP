@@ -1,15 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <stdio.h>
 #include <bits/stdc++.h>
 
 using namespace std;
 
-void open_store_file(int argc, char const* argv[], int* file_size) {
+void open_store_file(int argc, char const* argv[], int* file_count) {
   ifstream data; //variable declared to open a file
-  ofstream results; //variable declared used to create and write to a file
   string lines; //used to loop thorugh all the lines of the file
-  char* ch; //used to parse
+  char* ch; //used to parse data
 
   if(argv[1] == NULL) {
     cout << "command lines have not been entered" << endl;
@@ -25,14 +25,32 @@ void open_store_file(int argc, char const* argv[], int* file_size) {
     else {
       cout << "successfully opened file" << endl; //print a success message if file opened
     }
-    /*store data using getline and the size of the file*/
+    while(getline(data,lines)) {
+      *file_count += 1; //gets  the number of lines
+      char raw_arr[lines.size()+1]; //declared raw character array (+1 because of newline)
+      strcpy(raw_arr, lines.c_str()); //copy the string into a raw character array
+      ch = strtok(raw_arr, "\t "); //strtok will ignore tabs and spaces in the character array of the string lines will find the first number
+      int number = atoi(ch); //convert string to integer (works with character pointers)
+      ch = strtok(NULL, "\t "); //ignore tabs and spaces for the next number found
+      int xcoord = atoi(ch); //convert string to integer (works with character pointers)
+      ch = strtok(NULL, "\t "); //ignore tabs and spaces for the last number found
+      int ycoord = atoi(ch); //convert string to integer (works with character pointers)
+
+      //store the number, xcoord, ycoord into an array here
+    }
   }
 }
 
-int main(int argc, char const* argv[]) {
-  int file_size = 0;
+void TSP(int* file_count) {
+  ofstream results; //variable declared to create and write to a file
+  cout << "TSP Function Called" << endl;
+}
 
-  open_store_file(argc, argv, &file_size);
+int main(int argc, char const* argv[]) {
+  int file_count = 0;
+
+  open_store_file(argc, argv, &file_count);
+  TSP(&file_count); //pass the array here
 
   return 0;
 }
