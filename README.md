@@ -32,3 +32,15 @@ https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_
 
 - Each city must be listed exactly once in this list.
 - This is the certificate for your solution and your solutions will be checked. I they are not valid you will not receive credit for them.
+
+## Check List
+
+- Does your program correctly compute tour lengths for simple cases?
+- Does your program read input files and options from the command line?
+- Does your program meet the output specifications?
+- Did you check that you produce solutions that verify correctly?
+- Did you find solutions to the example instances?
+- Did you find solutions to the test instances?
+- Does your code compile/run without issue according to your documentation?
+- Have you submitted your report to Canvas? In the comment section post the onid username of the person who submitted to TEACH.
+- Have you submitted your solutions to the test cases, your source code and README file to TEACH?
