@@ -14,9 +14,9 @@ https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_
 
 1) g++ TSP.cpp
 
-2) ./a.out test-input[number].txt
+2) ./a.out test-input-[number].txt
 
-3) test-input[number].txt.tour will be created
+3) test-input-[number].txt.tour will be created
 
 
 ## Your program must
