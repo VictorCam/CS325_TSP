@@ -10,6 +10,14 @@ https://oregonstate.instructure.com/courses/1774562/pages/tsp-files?module_item_
 ## TSP Test Cases
 https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_item_id=19350432
 
+## How to run TSP.cpp file
+
+1) g++ TSP.cpp
+
+2) ./a.out test-input[number].txt
+
+3) test-input[number].txt.tour will be created
+
 
 ## Your program must
 - Accept problem instances on the command line.
