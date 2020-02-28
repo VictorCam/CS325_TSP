@@ -44,3 +44,7 @@ https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_
 - Does your code compile/run without issue according to your documentation?
 - Have you submitted your report to Canvas? In the comment section post the onid username of the person who submitted to TEACH.
 - Have you submitted your solutions to the test cases, your source code and README file to TEACH?
+
+## Extra Credit
+
+Post your "best" tour for each test case to the competition discussion board by Friday at 11:59 pm. The minimum tour for each test case will be verified.  If the tours are valid the winning team will receive extra credit points.  The amount of extra credit depends on whether a team wins multiple test cases.   For winning one test case your team members will receive 3 points extra credit to be used towards a project score.  For two winning test cases your team will receive 5 points and for more than two 10 points.   This may result in over 100% for your project grade.
