@@ -49,6 +49,7 @@ void TSP(int argc, char const* argv[], int file_count, vector<int> &number, vect
   string first_arg = argv[1]; //converting argv[1] to a string
   string final_str = first_arg + ".tour"; //add .tour to the end of the file
   results.open(final_str.c_str()); //convert the string into a c string
+  cout << "created tour file successfully" << endl; //created tour file porperly
   int dis_trav = 0; //will contain the total distance of the traveled path
   int traveled[file_count]; //will contain the city identifier values
   vector<int> iden; //will be used for identifying the city value in the nearest vector
@@ -80,6 +81,10 @@ for (int i = 0; i < file_count; i++) {
        nearest.clear(); //clear the vector
        iden.clear(); //clear the vector
     }
+    int operation1 = pow((xcoord[traveled[0]] - xcoord[traveled[visited]]), 2.0); //calculating euclid distance
+    int operation2 = pow((ycoord[traveled[0]] - ycoord[traveled[visited]]), 2.0); //calculating euclid distance
+    int connected = sqrt(operation1 + operation2);
+    dis_trav += connected; //final euclid distance
     results << dis_trav << endl; //print to full distance cities into the .tour file
 
     for (int i = 0; i < file_count; i++) {
