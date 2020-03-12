@@ -49,16 +49,17 @@ void TSP(int argc, char const* argv[], int file_count, vector<int> &number, vect
   string first_arg = argv[1]; //converting argv[1] to a string
   string final_str = first_arg + ".tour"; //add .tour to the end of the file
   results.open(final_str.c_str()); //convert the string into a c string
+  cout << "created tour file successfully" << endl; //created tour file porperly
   int dis_trav = 0; //will contain the total distance of the traveled path
   int traveled[file_count]; //will contain the city identifier values
   vector<int> iden; //will be used for identifying the city value in the nearest vector
   vector<int> nearest; //will be used for finding which vector has the smallest distance
   int visited = 0; //check if a value is visited
 
-  traveled[visited] = number[0]; //check if the
-  number[traveled[visited]] = -1;
+  traveled[visited] = number[0]; //starting coordinate of our nearest neighbor algorithm
+  number[traveled[visited]] = -1; //since value is visited we set the number as a negative value
 
-for (int i = 0; i < file_count; i++) {
+for (int i = 0; i < file_count-1; i++) {
   for (int b = 0; b < file_count; b++) {
         if(-1 == number[b]) { //values that are -1 are already visited
           //do nothing
@@ -66,12 +67,12 @@ for (int i = 0; i < file_count; i++) {
         else {
         int operation1 = pow((xcoord[traveled[visited]] - xcoord[number[b]]), 2.0); //calculating euclid distance
         int operation2 = pow((ycoord[traveled[visited]] - ycoord[number[b]]), 2.0); //calculating euclid distance
-        nearest.push_back(sqrt(operation1 + operation2)); //calculating euclid distance
+        nearest.push_back(rint(sqrt(operation1 + operation2))); //calculating euclid distance
         iden.push_back(number[b]); //the city identifers should be at the same push_backed value
       }
     }
-       vector<int>::iterator min = min_element(nearest.begin(), nearest.end());
-       int dis = distance(nearest.begin(), min);
+       vector<int>::iterator min = min_element(nearest.begin(), nearest.end()); //find the smalest element out of all values
+       int dis = distance(nearest.begin(), min); //figures out at what position the city is located
 
        visited++; //increment the visited value to store its next minimum element
        traveled[visited] = iden[dis]; //using the position of the dis value to get that particular value
@@ -80,6 +81,11 @@ for (int i = 0; i < file_count; i++) {
        nearest.clear(); //clear the vector
        iden.clear(); //clear the vector
     }
+    int operation1 = pow((xcoord[traveled[0]] - xcoord[traveled[visited]]), 2.0); //calculating euclid distance
+    int operation2 = pow((ycoord[traveled[0]] - ycoord[traveled[visited]]), 2.0); //calculating euclid distance
+    int connected = rint(sqrt(operation1 + operation2)); //connect the final distance
+
+    dis_trav += connected; //final euclid distance
     results << dis_trav << endl; //print to full distance cities into the .tour file
 
     for (int i = 0; i < file_count; i++) {
