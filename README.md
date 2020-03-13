@@ -15,7 +15,7 @@ https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_
 
 ## How to run TSP.cpp file
 
-1) g++ TSP.cpp
+1) g++ -std=c++11 TSP.cpp
 
 2) ./a.out test-input-[number].txt
 
@@ -32,14 +32,14 @@ https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_
 - Each line defines a city and each line has three numbers separated by a white space
 
  - The first number is a city identifier
- - The second number is the city's x-coordinate
- - The third number is the city's y-corrdinate
+ - The second number is the city's x-coordinates
+ - The third number is the city's y-coordinates
 
 ## Output specifications
 
-- You must output your solution int oanother text file with n+1 lines, where n is the number of cities.
+- You must output your solution in another text file with n+1 lines, where n is the number of cities.
 - The first line is the length of the tour your program computes.
-- The next n lines should contain the citiy identifier in the order they are visited by your tour.
+- The next n lines should contain the city identifier in the order they are visited by your tour.
 
 - Each city must be listed exactly once in this list.
 - This is the certificate for your solution and your solutions will be checked. I they are not valid you will not receive credit for them.
