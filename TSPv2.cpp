@@ -58,11 +58,20 @@ void TSP_KNN(int argc, char const* argv[], int file_count, vector<int> &number, 
   results.open(final_str.c_str()); //convert the string into a c string
   //cout << "hello" << endl;
   int dis_trav = 0; //will contain the total distance of the traveled path
-  int traveled[file_count][file_count]; //will contain the city identifier values
+
+  // int traveled[file_count][file_count]; //will contain the city identifier values
+  // Dynamically allocated 2d Array for int traveled
+  int* traveled[file_count];
+  for(int i = 0; i < file_count; i++) {
+    traveled[i] = new int[file_count];
+  }
+    // cout << "passed traveled 2d array" << endl;
+
   vector<int> iden; //will be used for identifying the city value in the nearest vector
   vector<int> nearest; //will be used for finding which vector has the smallest distance
   vector<int> total_smallest; //will find the smallest value possible in the TSP problem
   int visited = 0; //check if a value is visited
+
 for (int x = 0; x < file_count; x++) {
   for (int u = 0; u < file_count; u++) {
     number[u] = u; //resets the numbers as not visited
@@ -125,6 +134,11 @@ for (int i = 0; i < file_count-1; i++) {
     chrono::duration<double> seconds = end - start; //stop the timer
 
     cout << "total seconds: " << seconds.count() << endl; //display how long it took to calculate the method
+
+    for(int i = 0; i < file_count; ++i) {
+      delete [] traveled[i];
+    }
+    delete [] traveled;
 }
 
 int main(int argc, char const* argv[]) {
