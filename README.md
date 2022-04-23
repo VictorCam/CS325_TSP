@@ -5,7 +5,7 @@ CS325 Anaylsis of Algorithms [Project]
 https://oregonstate.instructure.com/courses/1774562/assignments/7799150
 
 ## Project Report (Google Docs)
-https://docs.google.com/document/d/1U9KtGudqF4P4ztoTKihwG6WMKFZo02TWNLqIWYsKo70/edit
+https://docs.google.com/document/d/1U9KtGudqF4P4ztoTKihwG6WMKFZo02TWNLqIWYsKo70/edit?usp=sharing
 
 ## TSP Files
 https://oregonstate.instructure.com/courses/1774562/pages/tsp-files?module_item_id=19350430
