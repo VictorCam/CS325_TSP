@@ -1,17 +1,12 @@
 # CS325_TSP
 CS325 Anaylsis of Algorithms [Project]
 
-## Project
-https://oregonstate.instructure.com/courses/1774562/assignments/7799150
+## Summary
+
+This is a traveling salesman problem. Using the Nearest Neighbours Algorithm. The source file is the TSP.cpp file. The rest of the files with test-input-#.txt are uses for testing the TSP.cpp algorithm. Once finished a test-input-#.txt.tour will be created where it will contain information of the shortest distance acheivable.
 
 ## Project Report (Google Docs)
 https://docs.google.com/document/d/1U9KtGudqF4P4ztoTKihwG6WMKFZo02TWNLqIWYsKo70/edit?usp=sharing
-
-## TSP Files
-https://oregonstate.instructure.com/courses/1774562/pages/tsp-files?module_item_id=19350430
-
-## TSP Test Cases
-https://oregonstate.instructure.com/courses/1774562/pages/tsp-test-cases?module_item_id=19350432
 
 ## How to run TSP.cpp file
 
