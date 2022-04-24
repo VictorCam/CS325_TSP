@@ -3,7 +3,7 @@ CS325 Anaylsis of Algorithms [Project]
 
 ## Summary
 
-This is a traveling salesman problem. Using the Nearest Neighbours Algorithm. The source file is the TSP.cpp file. The rest of the files with test-input-#.txt are uses for testing the TSP.cpp algorithm. Once finished a test-input-#.txt.tour will be created where it will contain information of the shortest distance acheivable.
+This is a traveling salesman problem. Using the Nearest Neighbours Algorithm. **The source file is the TSP.cpp file**. The rest of the files with test-input-#.txt are uses for testing the TSP.cpp algorithm. Once finished a test-input-#.txt.tour will be created where it will contain information of the shortest distance acheivable.
 
 ## Project Report (Google Docs)
 https://github.com/VictorCam/CS325_TSP/blob/master/Project%20Report%20CS325.pdf
